@@ -11,7 +11,7 @@ class Car {
         this._price = price;
         this._maxSpeed = maxSpeed;
         this._isOn = isOn;
-        this._distance = distance;
+        this._distance = distance = 0;
 
         
     }
@@ -54,16 +54,11 @@ class Car {
         }
         return this._speed; 
     }
-  
-
     drive(hours) {
-        this._distance = 0;
-        if (this._isOn === true) {
+        if (!this._isOn) return;
         this._distance += hours * this._speed;
-        }
-        return this._distance;
+      }
     }
-  }
   
   const mustang = new Car({ maxSpeed: 200, price: 2000 });
   
