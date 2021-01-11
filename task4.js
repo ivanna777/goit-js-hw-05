@@ -6,10 +6,10 @@ class StringBuilder {
         return this._value;
     }
     append(str) {
-        return this._value+=(str);       
+        return this._value += (str);       
     }
     prepend(str) {
-        this._value = str+this._value; 
+        this._value = str + this._value; 
         return this._value;
     }
     pad(str) {
